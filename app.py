@@ -33,7 +33,7 @@ def save_diary():
     content_receive = request.form.get("content_give")
     
     today = datetime.now()
-    mytime = today.strftime('%Y-5m-%d-%H-%M-%S')
+    mytime = today.strftime('%Y-%m-%d-%H-%M-%S')
     
     file = request.files["file_give"]
     extension = file.filename.split('.')[-1]
@@ -59,4 +59,4 @@ def save_diary():
     return jsonify({'msg':'Upload complete!'})
 
 if __name__ == '__main__':
-    app.run('0.0.0.0', port=5050, debug=True)
+    app.run('0.0.0.0', port=5000, debug=True)
